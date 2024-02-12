@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(28, 114, 114);
+}
+.header {
+    background-color: rgb(255, 241, 161);
+}
+.headerMenu {
+    width: auto;
+    height: 30px;
+    border: 1px;
+    border-style: solid;
+    background-color: white;
+}
+.article {
+    margin-top: 15px;
+    display: grid;
+    row-gap: 10px;
+}
+.articleText {
+    width: auto;
+    height: 80px;
+    background-color: white;
+}
+.NextPg {
+    background-color: white;
+    width: 150px;
+    height: 50px;
+    margin: auto;
+    margin-top: 15px;
+}
+.footer {
+    background-color: white;
+    width: 95%;
+    height: 150px;
+    margin: auto;
+    margin-top: 50px;
+}
+.card{
+    width: 200px;
+    height: auto;
+    background-color: blanchedalmond;
+    padding: 1rem 0.8rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    h2 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+}
+.image-container {
+    width: 80%;
+    margin: 0 auto;
+    img {
+        width: 100%;
+
+        height: auto;
+    }
+}
+.details-button{
+
+}
