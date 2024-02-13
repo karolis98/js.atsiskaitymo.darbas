@@ -2,6 +2,7 @@ const detailsPage = document.getElementById('details');
 const articleText = document.getElementById('articleText');
 
 const createCardWithInfo =(info) =>{
+    console.log('info ===', info);
     const card = document.createElement("div");
     card.setAttribute("class", "card");
     const price = document.createElement("p");
@@ -37,7 +38,23 @@ const fetchInfo = async ()=>{
 
         const info = await response.json();
         
-        info.forEach((info) => {
+        const sortedItems = info.sort((a, b) => {
+            const aPrice = parseInt(a.price)
+            const bPrice = parseInt(b.price)
+            if (aPrice > bPrice) {
+                return 1;
+            }
+            if (aPrice < bPrice) {
+                return -1;
+            }
+            if (aPrice === bPrice) {
+                return 0;
+            }
+        })
+        console.log('info ===', info);
+        console.log('sortedItems ===', sortedItems);
+
+        sortedItems.forEach((info) => {
             const card =  createCardWithInfo(info)
             articleText.append(card);
 
@@ -49,3 +66,4 @@ const navigateToDetailsPage = (itemId) => {
 }
 
 fetchInfo();
+

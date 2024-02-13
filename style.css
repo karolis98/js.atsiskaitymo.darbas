@@ -14,6 +14,7 @@ body {
 .article {
     margin-top: 15px;
     display: grid;
+    grid-template-columns: auto auto auto;
     row-gap: 10px;
 }
 .articleText {
@@ -50,14 +51,37 @@ body {
     }
 }
 .image-container {
-    width: 80%;
-    margin: 0 auto;
-    img {
-        width: 100%;
-
-        height: auto;
-    }
+   max-width: 90%;
+   img {
+    width: 100%;
+   }
+   
 }
 .details-button{
+    width: 114px;
+}
 
+.single-item {
+    background-color: bisque;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 6px 7px 1px 1px #9f999985;
+}
+
+.price {
+
+}
+
+.title {
+
+}
+
+.single-image-container {
+    padding: 10rem;
+    padding-bottom: 0px;
+    img {
+        width: 100%;
+        object-fit:cover;
+        height: 80%;
+    }
 }
