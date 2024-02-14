@@ -1,28 +1,33 @@
+const newAd = document.getElementById('newAd');
 const detailsPage = document.getElementById('details');
 const articleText = document.getElementById('articleText');
 
+
 const createCardWithInfo =(info) =>{
     console.log('info ===', info);
+    const newAd = document.createElement("a");
     const card = document.createElement("div");
-    card.setAttribute("class", "card");
     const price = document.createElement("p");
     const name = document.createElement("h2");
     const imgURL = document.createElement("img");
     const imgDiv = document.createElement("div");
     const detailsButton = document.createElement("button");
-
+    
+   
+    card.setAttribute("class", "card");
     detailsButton.setAttribute("class", "details-button");
     detailsButton.setAttribute("data-id", info.id); // Adding data-id attribute to store the item ID
+    imgDiv.setAttribute("class", "image-container");
     detailsButton.addEventListener("click", () => { // Adding click event listener
         navigateToDetailsPage(info.id); // Call function to navigate to details page
     });
     
-    imgDiv.setAttribute("class", "image-container");
     name.innerText = info.name;
     detailsButton.innerText = "Details";
     price.innerText = `Price: ${info.price}$`;
     imgURL.src = info.imgURL;
 
+    
     imgDiv.append(imgURL);
     card.append(name);
     card.append(imgDiv);           
@@ -30,6 +35,12 @@ const createCardWithInfo =(info) =>{
     card.append(detailsButton);
     return card;
 }
+newAd.setAttribute("class", "new-ad");
+
+newAd.addEventListener("click", () => {
+    newAdPage();
+})
+
 
 const fetchInfo = async ()=>{
     const response = await fetch(
@@ -65,5 +76,8 @@ const navigateToDetailsPage = (itemId) => {
     window.location.href = `details.html?id=${itemId}`;
 }
 
+const newAdPage = () => {
+    window.location.href = "newAd.html"
+}
 fetchInfo();
 

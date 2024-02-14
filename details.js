@@ -47,12 +47,10 @@ const createCardWithInfo =(info) =>{
     location.innerText = `Location: ${info.location}`;
 
     image.src = info.imgURL;
+    
+    
     buttonsContainer.append(backButton, deleteButton);
     imageContainer.append(image);
-    
-
-
-
     card.append(imageContainer);           
     card.append(title);
     card.append(price);
@@ -63,7 +61,7 @@ const createCardWithInfo =(info) =>{
     return card;
 }
 
-const navigateToListPage = () => {
+  function navigateToListPage() {
     
     window.location.href = "index.html";
 }

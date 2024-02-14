@@ -5,11 +5,17 @@ body {
     background-color: rgb(255, 241, 161);
 }
 .headerMenu {
-    width: auto;
+
+    width: 85%;
     height: 30px;
+    margin: auto;
     border: 1px;
     border-style: solid;
-    background-color: white;
+    background-color:bisque
+}
+#newAd {
+    margin-left: 50px;
+    margin-top: 5px;
 }
 .article {
     margin-top: 15px;
@@ -77,11 +83,35 @@ body {
 }
 
 .single-image-container {
-    padding: 10rem;
+
     padding-bottom: 0px;
     img {
         width: 100%;
         object-fit:cover;
         height: 80%;
     }
+}
+
+.newAd-card {
+    width: 86%;
+    height: 250px;
+  
+}
+
+.newAd-name, .newAd-price, .newAd-imgURL, .newAd-description, .newAd-locations {
+    background-color: rgb(230, 221, 221);
+    width: 86%;
+    height: 50px;
+    margin-top: 15px;
+
+}
+
+.footer{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    align-items: end;
+    background-color: bisque;
+    border-radius: 5px;
+    
 }
