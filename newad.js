@@ -22,6 +22,9 @@ window.onclick = function(event) {
 
 const form = document.getElementById("modal-content animate");
 
+function navigateToListPage() {
+    
+    window.location.href = "index.html"}
 
 form.onsubmit = async function(event) {
     event.preventDefault()
@@ -48,5 +51,6 @@ const response = await fetch(
                     
         }
         )
-        console.log(response);
+
+        navigateToListPage();
         }

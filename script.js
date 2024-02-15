@@ -3,6 +3,11 @@ const detailsPage = document.getElementById('details');
 const articleText = document.getElementById('articleText');
 
 
+let mySound = new Audio('videoplayback.m4a');
+mySound.addEventListener("canplaythrough", (event) => {
+    mySound.play();
+})
+ 
 const createCardWithInfo =(info) =>{
     console.log('info ===', info);
     const newAd = document.createElement("a");
