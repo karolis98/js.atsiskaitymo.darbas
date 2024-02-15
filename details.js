@@ -16,11 +16,7 @@ const createCardWithInfo =(info) =>{
     const deleteButton = document.createElement("button");
     const location = document.createElement("p");
 
-    // detailsButton.setAttribute("class", "details-button");
-    // detailsButton.setAttribute("data-id", info.id); // Adding data-id attribute to store the item ID
-    // detailsButton.addEventListener("click", () => { // Adding click event listener
-        // navigateToDetailsPage(info.id); // Call function to navigate to details page
-    // });
+    
     detailsText.setAttribute("class", "details-text");
     price.setAttribute("class", "price");
     title.setAttribute("class", "title");
@@ -55,7 +51,7 @@ const createCardWithInfo =(info) =>{
     card.append(title);
     card.append(price);
     card.append(location);
-    // card.append(detailsButton);
+    
     card.append(detailsText);
     card.append(buttonsContainer);
     return card;

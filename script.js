@@ -7,6 +7,8 @@ let mySound = new Audio('videoplayback.m4a');
 mySound.addEventListener("canplaythrough", (event) => {
     mySound.play();
 })
+
+
  
 const createCardWithInfo =(info) =>{
     console.log('info ===', info);
@@ -21,10 +23,10 @@ const createCardWithInfo =(info) =>{
    
     card.setAttribute("class", "card");
     detailsButton.setAttribute("class", "details-button");
-    detailsButton.setAttribute("data-id", info.id); // Adding data-id attribute to store the item ID
+    detailsButton.setAttribute("data-id", info.id); 
     imgDiv.setAttribute("class", "image-container");
-    detailsButton.addEventListener("click", () => { // Adding click event listener
-        navigateToDetailsPage(info.id); // Call function to navigate to details page
+    detailsButton.addEventListener("click", () => { 
+        navigateToDetailsPage(info.id); 
     });
     
     name.innerText = info.name;
@@ -77,7 +79,7 @@ const fetchInfo = async ()=>{
         });
 }
 const navigateToDetailsPage = (itemId) => {
-    // Navigate to another page with item ID in the URL
+    
     window.location.href = `details.html?id=${itemId}`;
 }
 

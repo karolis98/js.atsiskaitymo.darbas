@@ -29,11 +29,16 @@ body {
     margin: auto;
     border: 1px;
     border-style: solid;
-    background-color:bisque
+    background-color:bisque;
+    border-radius: 5px;
 }
 #newAd {
   cursor: pointer;
   margin: auto;
+  background-color: green;
+  border: outset black;
+  height: 35px;
+  font-family: georgia;
 }
 .article {
     margin-top: 15px;
