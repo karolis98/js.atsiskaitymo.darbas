@@ -8,8 +8,12 @@ mySound.addEventListener("canplaythrough", (event) => {
     mySound.play();
 })
 
+const image = document.createElement("img");
+image.setAttribute("class", "newAdImg")
+image.src = "./+.png";
+newAd.append(image);
 
- 
+
 const createCardWithInfo =(info) =>{
     console.log('info ===', info);
     const newAd = document.createElement("a");
@@ -24,6 +28,7 @@ const createCardWithInfo =(info) =>{
     card.setAttribute("class", "card");
     detailsButton.setAttribute("class", "details-button");
     detailsButton.setAttribute("data-id", info.id); 
+    name.setAttribute("class", "card-title")
     imgDiv.setAttribute("class", "image-container");
     detailsButton.addEventListener("click", () => { 
         navigateToDetailsPage(info.id); 

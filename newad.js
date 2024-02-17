@@ -1,3 +1,9 @@
+
+let mySound = new Audio('newad.m4a');
+mySound.addEventListener("canplaythrough", (event) => {
+    mySound.play();
+})
+
 const backB = document.getElementById("back");
 
 backB.addEventListener("click",() => {

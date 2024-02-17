@@ -3,6 +3,11 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
 console.log(id);
 
+let mySound = new Audio('details.m4a');
+mySound.addEventListener("canplaythrough", (event) => {
+    mySound.play();
+})
+
 const createCardWithInfo =(info) =>{
     const card = document.createElement("div");
     card.setAttribute("class", "single-item");
